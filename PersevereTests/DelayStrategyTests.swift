@@ -26,13 +26,15 @@ class DelayStrategyTests: XCTestCase {
         let delays = s.delays(forNumberOfRetries: 100)
 
         for (i, v) in delays.enumerated() {
-            switch i {
-            case 0: XCTAssertTrue(v == 0 || v == base)
-            case 1: XCTAssertTrue(v == 0 || v == base || v == base*2 || v == base*3)
+            let retry = i + 1
+            switch retry {
+            case 1: XCTAssertTrue(v == 0 || v == base)
+            case 2: XCTAssertTrue(v == 0 || v == base || v == base*2 || v == base*3)
             default:
                 XCTAssertGreaterThanOrEqual(v, 0)
-                let slot = min(i, 32)
+                let slot = min(retry, 32)
                 let upperK = pow(2.0, Double(slot)) - 1
+
                 XCTAssertLessThanOrEqual(v, upperK * base)
             }
         }
