@@ -190,7 +190,8 @@ fileprivate extension Array {
 
 fileprivate extension DispatchTimeInterval {
     init(seconds: TimeInterval) {
-        self = .nanoseconds(Int(round(seconds * Double(NSEC_PER_SEC))))
+        // Note that we support delays of at most (2^32/1000)/3600 = 1193 hours
+        self = .milliseconds(Int(round(seconds * Double(1000))))
     }
 }
 
