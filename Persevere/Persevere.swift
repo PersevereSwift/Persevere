@@ -71,6 +71,12 @@ public indirect enum DelayStrategy {
     }
 }
 
+public func min(a: DelayStrategy, b: DelayStrategy) -> DelayStrategy {
+    return .custom { i in
+        return min(a.secondsUntilNextRetry(retry: i), b.secondsUntilNextRetry(retry: i))
+    }
+}
+
 /// A RetryPolicy describes a policy for Persevere by
 /// which to retry failed operations
 public struct RetryPolicy {
@@ -91,7 +97,7 @@ public protocol RetryableResult {
     var error: Error? { get }
 }
 
-public typealias Retryable<R: RetryableResult> = ((R) -> ()) -> ()
+public typealias Retryable<R: RetryableResult> = (@escaping (R) -> ()) -> ()
 
 public class Persevere {
 
@@ -131,7 +137,7 @@ fileprivate class Executor {
 
     fileprivate func execute<R: RetryableResult>(context: RetryContext, retryable: @escaping Retryable<R>, onNext: @escaping (R) -> ()) {
         retryable { res in
-            queue.sync {
+            self.queue.sync {
                 guard let _ = res.error else {
                     onNext(res)
                     return

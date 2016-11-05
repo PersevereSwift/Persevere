@@ -12,6 +12,12 @@
 		9DF6A2AD1DA1410200E2C8F6 /* PersevereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6A2AC1DA1410200E2C8F6 /* PersevereTests.swift */; };
 		9DF6A2AF1DA1410200E2C8F6 /* Persevere.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF6A2A11DA1410200E2C8F6 /* Persevere.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DF6A2B91DA1411100E2C8F6 /* Persevere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF6A2B81DA1411100E2C8F6 /* Persevere.swift */; };
+		E9FBC2731DCE68E80039908F /* PersevereRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC2721DCE68E80039908F /* PersevereRxSwiftTests.swift */; };
+		E9FBC2751DCE68E80039908F /* PersevereRxSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FBC2671DCE68E70039908F /* PersevereRxSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9FBC27D1DCE69440039908F /* PersevereRxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC27C1DCE69440039908F /* PersevereRxSwift.swift */; };
+		E9FBC2871DCE76BC0039908F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FBC2861DCE76BC0039908F /* RxSwift.framework */; };
+		E9FBC2881DCE76BE0039908F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FBC2861DCE76BC0039908F /* RxSwift.framework */; };
+		E9FBC28B1DCE770B0039908F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FBC28A1DCE770B0039908F /* RxBlocking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,6 +27,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9DF6A29D1DA1410200E2C8F6;
 			remoteInfo = Persevere;
+		};
+		E9FBC26F1DCE68E80039908F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DF6A2951DA1410200E2C8F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9FBC2641DCE68E70039908F;
+			remoteInfo = PersevereRxSwift;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -33,6 +46,15 @@
 		9DF6A2AC1DA1410200E2C8F6 /* PersevereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersevereTests.swift; sourceTree = "<group>"; };
 		9DF6A2AE1DA1410200E2C8F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DF6A2B81DA1411100E2C8F6 /* Persevere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persevere.swift; sourceTree = "<group>"; };
+		E9FBC2651DCE68E70039908F /* PersevereRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PersevereRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9FBC2671DCE68E70039908F /* PersevereRxSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersevereRxSwift.h; sourceTree = "<group>"; };
+		E9FBC2681DCE68E70039908F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FBC26D1DCE68E70039908F /* PersevereRxSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersevereRxSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9FBC2721DCE68E80039908F /* PersevereRxSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersevereRxSwiftTests.swift; sourceTree = "<group>"; };
+		E9FBC2741DCE68E80039908F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FBC27C1DCE69440039908F /* PersevereRxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersevereRxSwift.swift; sourceTree = "<group>"; };
+		E9FBC2861DCE76BC0039908F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E9FBC28A1DCE770B0039908F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,14 +73,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9FBC2611DCE68E70039908F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9FBC2881DCE76BE0039908F /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9FBC26A1DCE68E70039908F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9FBC2871DCE76BC0039908F /* RxSwift.framework in Frameworks */,
+				E9FBC28B1DCE770B0039908F /* RxBlocking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		9DF6A2941DA1410200E2C8F6 = {
 			isa = PBXGroup;
 			children = (
+				E9FBC25F1DCE67BD0039908F /* Frameworks */,
 				9DF6A2A01DA1410200E2C8F6 /* Persevere */,
 				9DF6A2AB1DA1410200E2C8F6 /* PersevereTests */,
+				E9FBC2661DCE68E70039908F /* PersevereRxSwift */,
+				E9FBC2711DCE68E80039908F /* PersevereRxSwiftTests */,
 				9DF6A29F1DA1410200E2C8F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +110,8 @@
 			children = (
 				9DF6A29E1DA1410200E2C8F6 /* Persevere.framework */,
 				9DF6A2A71DA1410200E2C8F6 /* PersevereTests.xctest */,
+				E9FBC2651DCE68E70039908F /* PersevereRxSwift.framework */,
+				E9FBC26D1DCE68E70039908F /* PersevereRxSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +136,34 @@
 			path = PersevereTests;
 			sourceTree = "<group>";
 		};
+		E9FBC25F1DCE67BD0039908F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBC28A1DCE770B0039908F /* RxBlocking.framework */,
+				E9FBC2861DCE76BC0039908F /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9FBC2661DCE68E70039908F /* PersevereRxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBC2671DCE68E70039908F /* PersevereRxSwift.h */,
+				E9FBC2681DCE68E70039908F /* Info.plist */,
+				E9FBC27C1DCE69440039908F /* PersevereRxSwift.swift */,
+			);
+			path = PersevereRxSwift;
+			sourceTree = "<group>";
+		};
+		E9FBC2711DCE68E80039908F /* PersevereRxSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBC2721DCE68E80039908F /* PersevereRxSwiftTests.swift */,
+				E9FBC2741DCE68E80039908F /* Info.plist */,
+			);
+			path = PersevereRxSwiftTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -100,6 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DF6A2AF1DA1410200E2C8F6 /* Persevere.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9FBC2621DCE68E70039908F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9FBC2751DCE68E80039908F /* PersevereRxSwift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +222,43 @@
 			productReference = 9DF6A2A71DA1410200E2C8F6 /* PersevereTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E9FBC2641DCE68E70039908F /* PersevereRxSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9FBC2761DCE68E80039908F /* Build configuration list for PBXNativeTarget "PersevereRxSwift" */;
+			buildPhases = (
+				E9FBC2601DCE68E70039908F /* Sources */,
+				E9FBC2611DCE68E70039908F /* Frameworks */,
+				E9FBC2621DCE68E70039908F /* Headers */,
+				E9FBC2631DCE68E70039908F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PersevereRxSwift;
+			productName = PersevereRxSwift;
+			productReference = E9FBC2651DCE68E70039908F /* PersevereRxSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9FBC26C1DCE68E70039908F /* PersevereRxSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9FBC2791DCE68E80039908F /* Build configuration list for PBXNativeTarget "PersevereRxSwiftTests" */;
+			buildPhases = (
+				E9FBC2691DCE68E70039908F /* Sources */,
+				E9FBC26A1DCE68E70039908F /* Frameworks */,
+				E9FBC26B1DCE68E70039908F /* Resources */,
+				E9FBC2891DCE76C70039908F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9FBC2701DCE68E80039908F /* PBXTargetDependency */,
+			);
+			name = PersevereRxSwiftTests;
+			productName = PersevereRxSwiftTests;
+			productReference = E9FBC26D1DCE68E70039908F /* PersevereRxSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,6 +278,15 @@
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
+					E9FBC2641DCE68E70039908F = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					E9FBC26C1DCE68E70039908F = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 9DF6A2981DA1410200E2C8F6 /* Build configuration list for PBXProject "Persevere" */;
@@ -177,6 +303,8 @@
 			targets = (
 				9DF6A29D1DA1410200E2C8F6 /* Persevere */,
 				9DF6A2A61DA1410200E2C8F6 /* PersevereTests */,
+				E9FBC2641DCE68E70039908F /* PersevereRxSwift */,
+				E9FBC26C1DCE68E70039908F /* PersevereRxSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +324,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9FBC2631DCE68E70039908F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9FBC26B1DCE68E70039908F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9FBC2891DCE76C70039908F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9DF6A2991DA1410200E2C8F6 /* Sources */ = {
@@ -216,6 +376,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9FBC2601DCE68E70039908F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9FBC27D1DCE69440039908F /* PersevereRxSwift.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9FBC2691DCE68E70039908F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9FBC2731DCE68E80039908F /* PersevereRxSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -223,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = 9DF6A29D1DA1410200E2C8F6 /* Persevere */;
 			targetProxy = 9DF6A2A91DA1410200E2C8F6 /* PBXContainerItemProxy */;
+		};
+		E9FBC2701DCE68E80039908F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9FBC2641DCE68E70039908F /* PersevereRxSwift */;
+			targetProxy = E9FBC26F1DCE68E80039908F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -389,6 +570,85 @@
 			};
 			name = Release;
 		};
+		E9FBC2771DCE68E80039908F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PersevereRxSwift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lockeandfisher.PersevereRxSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E9FBC2781DCE68E80039908F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PersevereRxSwift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lockeandfisher.PersevereRxSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E9FBC27A1DCE68E80039908F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PersevereRxSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lockeandfisher.PersevereRxSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E9FBC27B1DCE68E80039908F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PersevereRxSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lockeandfisher.PersevereRxSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -418,6 +678,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E9FBC2761DCE68E80039908F /* Build configuration list for PBXNativeTarget "PersevereRxSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9FBC2771DCE68E80039908F /* Debug */,
+				E9FBC2781DCE68E80039908F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E9FBC2791DCE68E80039908F /* Build configuration list for PBXNativeTarget "PersevereRxSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9FBC27A1DCE68E80039908F /* Debug */,
+				E9FBC27B1DCE68E80039908F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
